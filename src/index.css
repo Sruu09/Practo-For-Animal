@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Brand Color Palette */
+    --color-forest-dark: #173F35;      /* Primary: Deep Forest Green */
+    --color-ivory: #FFF5E8;             /* Main Background: Warm Ivory */
+    --color-sage: #D9E6D2;              /* Secondary Background: Sage Green */
+    --color-coral: #E97856;             /* Primary CTA: Warm Coral */
+    --color-coral-hover: #D86341;       /* Primary CTA Hover */
+    --color-golden: #F2BE55;            /* Accent: Golden Yellow */
+    --color-card-bg: #FFFFFF;           /* Card Background: White */
+    --color-text-primary: #203B34;      /* Primary Text: Deep Charcoal Green */
+    --color-text-secondary: #52675D;    /* Secondary Text */
+    --color-border: #315A4D;            /* Borders */
+    --color-sage-light: #EBF2E8;        /* Soft Sage Tint */
+    --color-coral-light: #FCECE7;       /* Soft Coral Tint */
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+    color: var(--color-forest-dark);
+  }
+}
+
+/* Custom refined playful border and shadow utility styles */
+.playful-card {
+  background-color: #FFFFFF;
+  border: 2px solid #315A4D;
+  border-radius: 1.5rem;
+  box-shadow: 4px 4px 0px #315A4D;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.playful-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 6px 7px 0px #315A4D;
+}
+
+.playful-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 2px solid #315A4D;
+  padding: 0.65rem 1.4rem;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 3px 3px 0px #315A4D;
+  cursor: pointer;
+}
+
+.playful-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 5px 0px #315A4D;
+}
+
+.playful-btn:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 0px #315A4D;
+}
+
+.playful-btn-primary {
+  background-color: #E97856;
+  color: #FFFFFF;
+  border: 2px solid #315A4D;
+}
+
+.playful-btn-primary:hover {
+  background-color: #D86341;
+}
+
+.emergency-pulse-btn {
+  background: #E97856;
+  color: #FFFFFF;
+  border: 2px solid #FFF5E8;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.35);
+  font-weight: 800;
+  transition: all 0.2s ease-in-out;
+}
+
+.emergency-pulse-btn:hover {
+  background: #D86341;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Whimsical hand-drawn squiggles and dotted badges */
+.hand-drawn-border {
+  border: 2px solid #315A4D;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.soft-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1.5px solid #315A4D;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9E6D2;
+  border: 1px solid #315A4D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #173F35;
+}
